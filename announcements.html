@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College News</title>
     <style>
       body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #cdbbdb;
       }
       .navbar {
       display: flex;
       justify-content: space-between;
-      background-color: #333;
+      background-color: blueviolet;
       padding: 10px;
+      margin: 0;
       }
       .navbar a {
       color: white;
       text-decoration: none;
       padding: 8px 16px;
+      border: 3px solid black;
       }
       .navbar a:hover {
       background-color: #ddd;
@@ -58,25 +62,49 @@
       font-size: 16px;
       line-height: 1.5;
       }
+      .an1 {
+      border: 3px double black;
+      margin: 30px 0;
+      background-color: white;
+      }
+      h2 {
+      text-align: center;
+      }
+      p {
+      text-align: left;
+      font-size: 20px;
+      margin: 10px;
+      }
+      button {
+      height: 70px;
+      width: 20%;
+      min-width: 200px;
+      margin: 0 40%;
+      border: 3px solid black;
+      border-radius: 5px;
+      background-color: blueviolet;
+      color: whitesmoke;
+      font-size: 20px;
+      }
     </style>
   </head>
   <body>
     <div class="navbar">
       <div>
         <a href="index.html">Home</a>
-        <div class="dropdown">
-          <a href="complaints.html">Complaints Portal</a>
-          <div class="dropdown-content">
+        <div class = "dropdown">
+          <a>Complaints Portal</a>
+          <div class = "dropdown-content">
             <a href="complaints.html">Complaints</a>
             <a href="petitions.html">Petitions</a>
           </div>
         </div>
         <div class="dropdown">
-          <a href="resources.html">Resources</a>
+          <a>Resources</a>
           <div class="dropdown-content">
-            <a href="marks.html">Marks</a>
-            <a href="attendance.html">Attendance</a>
-            <a href="information.html">Information</a>
+            <a href = "marks.html">Results</a>
+            <a href = "attendance.html">Attendance</a>
+            <a href = "information.html">Information</a>
           </div>
         </div>
         <div class="dropdown">
@@ -89,16 +117,24 @@
       </div>
       <div>
         <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
       </div>
     </div>
     <div class="announcements">
-      <h2>College Announces New Scholarship Program</h2>
-      <p>The college is proud to announce a new scholarship program for students who demonstrate academic excellence and financial need. The program will provide full tuition and fees for up to four years of undergraduate study.</p>
-      <h2>College Launches New Online Learning Platform</h2>
-      <p>The college has launched a new online learning platform that will allow students to take courses and earn degrees entirely online. The platform will offer a wide range of courses and degree programs, and will be accessible to students around the world.</p>
-      <h2>College Receives Grant for STEM Research</h2>
-      <p>The college has received a $1 million grant from the National Science Foundation to support research in the fields of science, technology, engineering, and mathematics (STEM). The grant will fund research projects and provide scholarships for students pursuing STEM degrees.</p>
+      <div class="an1">
+        <h2>College Announces New Scholarship Program</h2>
+        <p>The college is proud to announce a new scholarship program for students who demonstrate academic excellence and financial need. The program will provide full tuition and fees for up to four years of undergraduate study.</p>
+      </div>
+      <div class="an1">
+        <h2>College Launches New Online Learning Platform</h2>
+        <p>The college has launched a new online learning platform that will allow students to take courses and earn degrees entirely online. The platform will offer a wide range of courses and degree programs, and will be accessible to students around the world.</p>
+      </div>
+      <div class="an1">
+        <h2>College Receives Grant for STEM Research</h2>
+        <p>The college has received a $1 million grant from the National Science Foundation to support research in the fields of science, technology, engineering, and mathematics (STEM). The grant will fund research projects and provide scholarships for students pursuing STEM degrees.</p>
+      </div>
+    </div>
+    <div class="button">
+      <button>Add Announcement</button>
     </div>
   </body>
 </html>

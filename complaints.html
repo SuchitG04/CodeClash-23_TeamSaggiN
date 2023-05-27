@@ -2,54 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=nav, initial-scale=1.0">
     <title>complaint</title>
     <style>
-      body {
-      font-family: Arial, sans-serif;
+      * {
+      padding: 0;
+      margin: 0;
+      font-family: Arial;
+      /* font-size: 20px; */
+      font-weight: 700;
       }
       .main {
       display: flex;
       flex-direction: column;
-      background-color: #ccc;
+      background-color: #cdbbdb;
       width: 100%;
-      height: 160vh;
+      height: 200vh;
       }
       .complaint {
       width: 80%;
-      height: 135vh;
-      background-color: white;
+      height: 200vh;
+      background-color: #cdbbdb;
       justify-content:space-evenly;
       margin: 30px 10%;
-      color: white;
       }
       .complaints {
       height: 30vh;
       border: 3px solid #333;
       background-color: white;
-      margin: 2vh 5px 0 5px;
+      margin: 10vh 5px 0 5px;
       }
       h1 {
       text-align: center;
-      margin: 4px 0 10px 0;
+      margin: 10px 0 20px 0;
       color: #333;
       font-weight: bolder;
-      border-bottom: 3px solid #333;
+      border-bottom: 3px dotted #333;
+      padding: 10px 0 10px 0;
       }
       p {
-      text-align: center;
+      text-align: left;
       color: black;
+      margin: 15px;
       }
       .navbar {
       display: flex;
       justify-content: space-between;
-      background-color: #333;
+      background-color: blueviolet;
       padding: 10px;
       }
       .navbar a {
       color: white;
       text-decoration: none;
       padding: 8px 16px;
+      border: 3px solid black;
       }
       .navbar a:hover {
       background-color: #ddd;
@@ -91,12 +98,14 @@
       line-height: 1.5;
       }
       .createcomplaint {
-      width: 200px;
-      height: 40px;
-      background-color: #ccc;
-      margin: 0 34%;
+      width: 20%;
+      height: 70px;
+      background-color: blueviolet;
+      margin: 40px 40%;
       border-radius: 10px;
       border: 3px solid black;
+      min-width: 200px;
+      color: white;
       }
     </style>
   </head>
@@ -104,19 +113,19 @@
     <div class="navbar">
       <div>
         <a href="index.html">Home</a>
-        <div class="dropdown">
-          <a href="complaints.html">Complaints Portal</a>
-          <div class="dropdown-content">
+        <div class = "dropdown">
+          <a>Complaints Portal</a>
+          <div class = "dropdown-content">
             <a href="complaints.html">Complaints</a>
             <a href="petitions.html">Petitions</a>
           </div>
         </div>
         <div class="dropdown">
-          <a href="resources.html">Resources</a>
+          <a>Resources</a>
           <div class="dropdown-content">
-            <a href="marks.html">Marks</a>
-            <a href="attendance.html">Attendance</a>
-            <a href="information.html">Information</a>
+            <a href = "marks.html">Results</a>
+            <a href = "attendance.html">Attendance</a>
+            <a href = "information.html">Information</a>
           </div>
         </div>
         <div class="dropdown">
@@ -129,7 +138,6 @@
       </div>
       <div>
         <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
       </div>
     </div>
     <div class="main">
@@ -150,8 +158,8 @@
           <h1>complaint</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, maiores sapiente aliquid molestias omnis provident illum. Hic, at, aspernatur totam harum reprehenderit ipsa nisi, beatae culpa reiciendis nesciunt modi cum.</p>
         </div>
+        <button class="createcomplaint">create compliant</button>
       </div>
-      <button class="createcomplaint">create compliant</button>
     </div>
   </body>
 </html>

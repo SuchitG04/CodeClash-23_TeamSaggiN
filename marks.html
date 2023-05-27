@@ -1,5 +1,37 @@
 <!DOCTYPE html>
 <html>
+  <header>
+    <div class="navbar">
+      <div>
+        <a href="index.html">Home</a>
+        <div class = "dropdown">
+          <a href = "complaints.html">Complaints Portal</a>
+          <div class = "dropdown-content">
+            <a href="complaints.html">Complaints</a>
+            <a href="petitions.html">Petitions</a>
+          </div>
+        </div>
+        <div class = "dropdown">
+          <a>Resources</a>
+          <div class = "dropdown-content">
+            <a href = "marks.html">Results</a>
+            <a href = "attendance.html">Attendance</a>
+            <a href = "information.html">Information</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a>News</a>
+          <div class="dropdown-content">
+            <a href="announcements.html">Announcement</a>
+            <a href="cca.html">CCA</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </header>
   <head>
     <title>Student Marks</title>
     <style>
@@ -9,13 +41,14 @@
       .navbar {
       display: flex;
       justify-content: space-between;
-      background-color: #333;
+      background-color: blueviolet;
       padding: 10px;
       }
       .navbar a {
       color: white;
       text-decoration: none;
       padding: 8px 16px;
+      border: 3px solid black;
       }
       .navbar a:hover {
       background-color: #ddd;
@@ -45,6 +78,15 @@
       .dropdown:hover .dropdown-content {
       display: block;
       }
+    </style>
+    <style>
+      /* CSS styling */
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #cdbbdb;
+      }
       h1 {
       text-align: center;
       }
@@ -70,57 +112,61 @@
       padding: 10px;
       font-size: 16px;
       text-align: center;
-      background-color: #333;
-      color: white;
-      border: none;
+      background-color: white;
+      color: black;
+      border: 3px solid black;
       cursor: pointer;
+      margin: 40px 0;
+      border-radius: 10px;
       }
       .result-container {
       margin-top: 20px;
       }
+      h1 {
+      margin: 50px 0;
+      }
+      label {
+      margin: 20px  0;
+      }
+      .fuckit {
+      color: #cdbbdb;
+      } 
+      .parent {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      }
+      .box {
+      width: 500px;
+      height: 400px;
+      background-color: blueviolet;
+      }
+      li,h2 {
+      color: white;
+      text-align: left;
+      padding: 5px;
+      }
+      h1,label {
+      color: white;
+      }
     </style>
   </head>
   <body>
-    <div class="navbar">
-      <div>
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-          <a href="complaints.html">Complaints Portal</a>
-          <div class="dropdown-content">
-            <a href="complaints.html">Complaints</a>
-            <a href="petitions.html">Petitions</a>
+    <div class="parent">
+      <div class="box">
+        <h1>Student Marks</h1>
+        <div class="form-container">
+          <div class="form-group">
+            <label for="usn">Enter USN:</label>
+            <input type="text" id="usn" placeholder="Eg: 123ABC" />
           </div>
+          <button class="btn-submit" onclick="viewMarks()">View Marks</button>
         </div>
-        <div class="dropdown">
-          <a href="resources.html">Resources</a>
-          <div class="dropdown-content">
-            <a href="marks.html">Marks</a>
-            <a href="attendance.html">Attendance</a>
-            <a href="information.html">Information</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a>News</a>
-          <div class="dropdown-content">
-            <a href="announcements.html">Announcement</a>
-            <a href="cca.html">CCA</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
+        <div class="result-container" id="resultContainer"></div>
       </div>
     </div>
-    <h1>Student Marks</h1>
-    <div class="form-container">
-      <div class="form-group">
-        <label for="usn">Enter USN:</label>
-        <input type="text" id="usn" placeholder="Eg: 123ABC" />
-      </div>
-      <button class="btn-submit" onclick="viewMarks()">View Marks</button>
-    </div>
-    <div class="result-container" id="resultContainer"></div>
     <script>
       function viewMarks() {
         var usn = document.getElementById("usn").value;
@@ -145,6 +191,7 @@
         var resultContainer = document.getElementById("resultContainer");
       
         if (marksData.hasOwnProperty(usn)) {
+          document.querySelector(".box").style.height = "500px"
           var marks = marksData[usn];
           var resultHTML = "<h2>Marks for USN: " + usn + "</h2>";
           resultHTML += "<ul>";

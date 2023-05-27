@@ -2,22 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-      body {
-      font-family: Arial, sans-serif;
+      * {
+      font-family: Arial;
+      padding: 0;
+      margin: 0;
       }
       .navbar {
       display: flex;
       justify-content: space-between;
-      background-color: #333;
-      padding: 10px;
+      background-color: blueviolet;
+      padding : 10px;
       }
       .navbar a {
       color: white;
       text-decoration: none;
       padding: 8px 16px;
+      border: 3px solid black;
       }
       .navbar a:hover {
       background-color: #ddd;
@@ -32,7 +37,7 @@
       position: absolute;
       background-color: #f9f9f9;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
       }
       .dropdown-content a {
@@ -47,26 +52,59 @@
       .dropdown:hover .dropdown-content {
       display: block;
       }
+      .index {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fpurple-gradient-background&psig=AOvVaw3_BMrhxWlJg9zIKk6l9xQ4&ust=1685211498836000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjr7pfMk_8CFQAAAAAdAAAAABAE');
+      background-color: #cdbbdb;
+      justify-content: center;
+      align-items: center;
+      }
+      .welcomebox {
+      width: 500px;
+      height: 400px;
+      background-color: #a348ea;
+      box-shadow: 20px 20px;
+      background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fpurple-gradient-background&psig=AOvVaw3_BMrhxWlJg9zIKk6l9xQ4&ust=1685211498836000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjr7pfMk_8CFQAAAAAdAAAAABAE');
+      }
+      h1 {
+      text-align: center;
+      margin: 20px 0 30px 0;
+      color: white;
+      }
+      .h1 {
+      border-color: #f1f1f1;
+      border-bottom: 3px solid white;
+      }
+      .done {
+      margin: 30px;
+      border: 3px solid white;
+      }
+      h2 {
+      margin: 20px 0;
+      text-align: center;
+      color: white;   
+      }
     </style>
-  </head>
   <body>
     <div class="navbar">
       <div>
         <a href="index.html">Home</a>
-        <div class="dropdown">
-          <a href="complaints.html">Complaints Portal</a>
-          <div class="dropdown-content">
+        <div class = "dropdown">
+          <a>Complaints Portal</a>
+          <div class = "dropdown-content">
             <a href="complaints.html">Complaints</a>
             <a href="petitions.html">Petitions</a>
           </div>
         </div>
-        <div class="dropdown">
-          <a href="resources.html">Resources</a>
-          <div class="dropdown-content">
-            <a href="marks.html">Marks</a>
-            <a href="attendance.html">Attendance</a>
-            <a href="information.html">Information</a>
-          </div>
+        <div class = "dropdown">
+          <a>Resources</a>
+            <div class = "dropdown-content">
+              <a href = "marks.html">Results</a>
+              <a href = "attendance.html">Attendance</a>
+              <a href = "information.html">Information</a>
+            </div>
         </div>
         <div class="dropdown">
           <a>News</a>
@@ -78,9 +116,20 @@
       </div>
       <div>
         <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
       </div>
     </div>
-    <h1 style="margin: 10px">Welcome to the Homepage</h1>
+    <div class="index">
+      <div class="welcomebox">
+        <div class="h1">
+          <h1><strong>Welcome to the MSRIT CSE Portal</strong></h1>
+        </div>
+        <div class="done">
+          <h2>This project was made by</h2>
+          <h2>Shashank</h2>
+          <h2>Suchit</h2>
+          <h2>Shantanu Pandey</h2>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
